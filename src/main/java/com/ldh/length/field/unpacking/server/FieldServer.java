@@ -12,7 +12,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
- * @Author: ldh Created on 2018/7/31
+ * @Author: ldh
  */
 public class FieldServer {
 

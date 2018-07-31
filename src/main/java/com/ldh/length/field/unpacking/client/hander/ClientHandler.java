@@ -6,13 +6,13 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 /**
- * @Author: ldh Created on 2018/7/31
+ * @Author: ldh
  */
 public class ClientHandler extends ChannelInboundHandlerAdapter {
 
   @Override
   public void channelActive(ChannelHandlerContext ctx) throws Exception {
-    Message customMsg = new Message((byte)0xAB, (byte)0xCD, "Hello,Netty".length(), "Hello,Netty");
-    ctx.writeAndFlush(customMsg);
+    Message message = new Message(Message.USER_TYPE, Message.DATA_FLAG, "Hello,Netty".length(), "Hello,Netty");
+    ctx.writeAndFlush(message);
   }
 }

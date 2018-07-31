@@ -3,12 +3,45 @@ package com.ldh.length.field.unpacking.message;
 import java.io.Serializable;
 
 /**
- * @Author: ldh Created on 2018/7/31
+ * @Author: ldh
  */
 public class Message implements Serializable{
 
+  /**
+   *   +----------+------+---------+--------+
+   *  /协议类型/协议头/协议长度/协议内容/
+   *  /  type  /  flag  /  length  /body    /
+   *+-------+-------+--------+--------+
+   */
+
+  /**
+   * 用户系统
+   */
+  public static byte USER_TYPE = 0xA;
+
+  /**
+   * pingpong机制处理心跳包
+   */
+  public static byte PING_PONG_FLAG = 0x0;
+
+  /**
+   * 超时包
+   */
+  public static byte TIME_OUT_FLAG = 0x1;
+
+  /**
+   * 一般业务数据
+   */
+  public static byte DATA_FLAG = 0x2;
+
+  /**
+   * 类型  系统编号 0xA 表示用户系统，0xB 表示B系统
+   */
   private byte type;
 
+  /**
+   * 信息标志  0x0 表示心跳包    0x1 表示超时包  0x2 业务信息包
+   */
   private byte flag;
 
   private int length;

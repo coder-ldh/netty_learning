@@ -8,7 +8,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import java.nio.charset.Charset;
 
 /**
- * @Author: ldh Created on 2018/7/31
+ * @Author: ldh
  */
 public class ClientFieldEncoder extends  MessageToByteEncoder<Message> {
 
