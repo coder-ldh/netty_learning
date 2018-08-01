@@ -9,8 +9,8 @@ public class Message implements Serializable{
 
   /**
    *   +----------+------+---------+--------+
-   *  /协议类型/协议头/协议长度/协议内容/
-   *  /  type  /  flag  /  length  /body    /
+   *    |   类型    |   头    |    长度   |    内容    |
+   *   |  type    |  flag  |  length |   body   |
    *+-------+-------+--------+--------+
    */
 

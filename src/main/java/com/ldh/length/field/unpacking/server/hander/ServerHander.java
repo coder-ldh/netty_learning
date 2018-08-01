@@ -17,7 +17,7 @@ public class ServerHander extends SimpleChannelInboundHandler{
   protected void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
     if (msg instanceof Message){
       Message message = (Message) msg;
-      logger.info("服务器接收到的信息{}"+ message.toString());
+      logger.debug("服务器接收到的信息：{}", message.toString());
     }
   }
 }
