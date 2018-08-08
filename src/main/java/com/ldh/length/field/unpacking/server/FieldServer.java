@@ -33,8 +33,8 @@ public class FieldServer {
           .childHandler(new ChannelInitializer<SocketChannel>() {
             @Override
             public void initChannel(SocketChannel ch) throws Exception {
-              ch.pipeline().addLast("serverfieldhandler",new ServerFieldHandler(MAX_FRAME_LENGTH,LENGTH_FIELD_LENGTH,LENGTH_FIELD_OFFSET,LENGTH_ADJUSTMENT,INITIAL_BYTES_TO_STRIP,false));
-              ch.pipeline().addLast("serverhander",new ServerHander());
+              ch.pipeline().addLast("serverFieldHandler",new ServerFieldHandler(MAX_FRAME_LENGTH,LENGTH_FIELD_LENGTH,LENGTH_FIELD_OFFSET,LENGTH_ADJUSTMENT,INITIAL_BYTES_TO_STRIP,false));
+              ch.pipeline().addLast("serverHander",new ServerHander());
             }
           });
       ChannelFuture f = b.bind(9999).sync();

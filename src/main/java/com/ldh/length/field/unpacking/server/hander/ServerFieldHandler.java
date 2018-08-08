@@ -6,7 +6,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
 
 /**
- * @Author:
+ * @Author:ldh
  * 此 hander 将数据帧解码为对象Message
  */
 public class ServerFieldHandler extends LengthFieldBasedFrameDecoder {
